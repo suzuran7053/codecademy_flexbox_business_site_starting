@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+/* MAIN */
+
+#main_conteiner {
+    display: grid;
+    gap: 20px;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+}
+
+#a {
+    grid-area: 1 / 1 / 2 span / 2 span;
+}
+
+#d {
+    grid-area: 2 / 3 / 1 span / 2 span;
+}
+
+#f {
+    grid-area: 3 / 2 / 1 span / 2 span;
+}
+
+main {
+    width: 90%;
+    margin: 3em auto;
+}
+
+main figure {
+    width: 50%;
+    height: 200px;
+    overflow: hidden;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    background: rgba(255, 255, 255, 0.755);
+    color: black;
+}
+
+figcaption:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
