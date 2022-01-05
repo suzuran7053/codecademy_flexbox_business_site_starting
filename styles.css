@@ -92,6 +92,9 @@ nav ul {
 }
 
 @media only screen and (max-width: 1168px) {
+    nav {
+        width: 100%;
+    }
     nav #nav_bottom,
     nav ul {
         display: none;
@@ -105,18 +108,54 @@ nav ul {
     display: grid;
     gap: 20px;
     grid-template: repeat(4, 250px) / repeat(4, 250px);
+    justify-content: center;
 }
 
 #a {
     grid-area: 1 / 1 / 2 span / 2 span;
+    background-image: url("images/1.jfif");
+}
+
+#b {
+    background-image: url("images/2.jfif");
+}
+
+#c {
+    background-image: url("images/3.jfif");
 }
 
 #d {
     grid-area: 2 / 3 / 1 span / 2 span;
+    background-image: url("images/11.jfif");
+}
+
+#e {
+    background-image: url("images/4.jfif");
 }
 
 #f {
     grid-area: 3 / 2 / 1 span / 2 span;
+    background-image: url("images/10.jfif");
+}
+
+#g {
+    background-image: url("images/5.jfif");
+}
+
+#h {
+    background-image: url("images/6.jfif");
+}
+
+#i {
+    background-image: url("images/7.jfif");
+}
+
+#j {
+    background-image: url("images/8.jfif");
+}
+
+#k {
+    background-image: url("images/9.jfif");
 }
 
 main,
@@ -130,22 +169,19 @@ main {
 }
 
 main .item {
-    align-items: stretch;
-}
-
-main img {
+    background-size: cover;
     width: 100%;
-    min-width: 250px;
     height: auto;
     overflow: hidden;
+    /* align-content: bottom; */
 }
 
 main p {
+    /* position: relative;
+    bottom: 0; */
     background: rgba(255, 255, 255, 0.755);
     color: black;
     height: 40px;
-    position: relative;
-    top: -40px;
     font-size: .8rem;
 }
 
@@ -153,9 +189,35 @@ main p:hover {
     background: rgba(255, 255, 255, 0.9);
 }
 
+@media only screen and (max-width: 1090px) {
+    #main_conteiner {
+        gap: 10px;
+        grid-template: repeat(4, 200px) / repeat(4, 200px);
+    }
+    main,
+    footer {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #main_conteiner {
+        grid-template: repeat(6, 220px) / repeat(2, 220px);
+    }
+    #a {
+        grid-area: 1 / 1 / 1 span / 1 span;
+    }
+    #d {
+        grid-area: 2 / 2 / 1 span / 1 span;
+    }
+    #f {
+        grid-area: 3 / 2 / 1 span / 1 span;
+    }
+}
+
 button {
     margin: 30px auto;
-    width: 100vw;
+    width: 95vw;
     display: block;
     background-color: #1855b9;
     padding: 10px;
